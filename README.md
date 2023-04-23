@@ -1,7 +1,7 @@
 # MicroserviceReservationApp
 A project prepared for Web Component Technologies class at TUL. Simple Microservice application for booking equipment.
 
-##Technologies learnt while developing project: 
+## Technologies learnt while developing project: 
 * Hexagonal architecture
 * SOAP
 * REST
