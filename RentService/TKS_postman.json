@@ -1,0 +1,430 @@
+{
+	"info": {
+		"_postman_id": "4ea0186a-ffc6-4b1b-b004-7fb5dc569ca5",
+		"name": "TKS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get all customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all moderators",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/moderator",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"moderator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all administrators",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/administrator",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cutomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer/0a6d766f-473b-46e1-b6d6-1571446465f6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"0a6d766f-473b-46e1-b6d6-1571446465f6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get moderator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/moderator",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"moderator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get administrator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/administrator",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"customer3\",\n    \"password\": \"password\",\n    \"email\": \"c3@xyz.pl\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create administrator",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin3\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/administrator",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create moderator",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"moderator3\",\n    \"password\": \"password\",\n    \"email\": \"mod3@app.xyz\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/moderator",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"moderator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer/59e2472c-1137-4646-9928-fc21d4790d40/activate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"59e2472c-1137-4646-9928-fc21d4790d40",
+								"activate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer/0a6d766f-473b-46e1-b6d6-1571446465f6/deactivate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"0a6d766f-473b-46e1-b6d6-1571446465f6",
+								"deactivate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get  all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/144acb76-f937-416f-a49d-fc5f7e349e67",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"144acb76-f937-416f-a49d-fc5f7e349e67"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product reservations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/5470ec59-01f6-426c-b7fd-2dd11212bb11/reservations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"5470ec59-01f6-426c-b7fd-2dd11212bb11",
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"price\": 12.75\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservation",
+			"item": [
+				{
+					"name": "Get all reservations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/reservation",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get reservation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/reservation/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create reservation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer\": \"59e2472c-1137-4646-9928-fc21d4790d40\",\n    \"product\": \"5470ec59-01f6-426c-b7fd-2dd11212bb11\",\n    \"startDate\": \"2023-08-01\",\n    \"endDate\": \"2023-08-09\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/reservation",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

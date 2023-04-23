@@ -1,0 +1,16 @@
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: user
+--
+
+INSERT INTO public.users (u, userid, password, type, username, version, email, is_active) VALUES ('Customer', '02171fb3-d462-4bd7-9bd0-4ca635e5c9fb', '$2a$10$CqLvy/6opinaqFNvWxoMRe20Y3QjRq/mim5HujWnm8kgGCuVvnNKS', 2, 'customer2', 0, 'c2@xyz.pl', false);
+INSERT INTO public.users (u, userid, password, type, username, version, email, is_active) VALUES ('Administrator', '19d5503b-1eee-4949-9f2d-e8c5f44eb4c9', '$2a$10$LWITEdntyJ7CSUpLm9CpGucbCjIUmbx96NgsF73K3Vn.VIYbeDmKe', 0, 'admin1', 0, NULL, NULL);
+INSERT INTO public.users (u, userid, password, type, username, version, email, is_active) VALUES ('Administrator', '6f14875d-dbc7-4934-85f8-9dd53edbd154', '$2a$10$DV.eh2IO05XkzT5sNiaJS.67vjppCINmmffPxmpOISNzqD5PT0Jg2', 0, 'admin2', 0, NULL, NULL);
+INSERT INTO public.users (u, userid, password, type, username, version, email, is_active) VALUES ('Administrator', '863f8916-7396-4dea-a798-ff9e1dd4d62f', '$2a$10$3urmehok4lqaKzL9tvnNXeT6ljgjh93rwzWCFkJHgiz5jdr8eZYFu', 0, 'admin3', 0, NULL, NULL);
+INSERT INTO public.users (u, userid, password, type, username, version, email, is_active) VALUES ('Administrator', '0744f4d2-14ed-4db4-b04f-abef73d68fb4', '$2a$10$3urmehok4lqaKzL9tvnNXeT6ljgjh93rwzWCFkJHgiz5jdr8eZYFu', 0, 'jon_snow', 0, NULL, NULL);
+INSERT INTO public.users (u, userid, password, type, username, version, email, is_active) VALUES ('Moderator', '9b49fcbb-cf38-4db2-b279-bcc02ff154fa', '$2a$10$POAYst.onWbFhPUPThhwG.wjE47k6VsFEbx6vJPEiaCWR43rTcLLi', 1, 'moderator1', 0, 'mod1@app.xyz', NULL);
+INSERT INTO public.users (u, userid, password, type, username, version, email, is_active) VALUES ('Moderator', '45288028-47ac-451b-9881-e09916380076', '$2a$10$alXq32y2Rn6PjWmYimw.dekoOwPsB7bwHK9rn77DMkJpCKV7ejY5q', 1, 'moderator2', 0, 'mod2@app.xyz', NULL);
+INSERT INTO public.users (u, userid, password, type, username, version, email, is_active) VALUES ('Moderator', '05241625-b0c3-49c0-83a1-a706d1e3e35d', '$2a$10$hqDDPXee64lp/CxwK36goeD/jBYxxNgkoemdeFDTMCdgoxFW5LYqu', 1, 'moderator3', 0, 'mod3@app.xyz', NULL);
+INSERT INTO public.users (u, userid, password, type, username, version, email, is_active) VALUES ('Customer', '0a6d766f-473b-46e1-b6d6-1571446465f6', '$2a$10$BIgm2XwxAdGPWvfkYX56N.46enXGWYwoNCKUJQJ3q9h8RZEAz5U3e', 2, 'customer1', 3, 'c1@xyz.pl', true);
+INSERT INTO public.users (u, userid, password, type, username, version, email, is_active) VALUES ('Customer', '59e2472c-1137-4646-9928-fc21d4790d40', '$2a$10$4n2WP8uEkGt2oAtI8Bm53ugR4hhca3K7/aQqyjVwF26kG8WDRapha', 2, 'customer3', 1, 'c3@xyz.pl', true);
+INSERT INTO public.users (u, userid, password, type, username, version, email, is_active) VALUES ('Customer', '4c6319c6-2530-403e-ba1c-7d0e8e505e78', '$2a$10$4n2WP8uEkGt2oAtI8Bm53ugR4hhca3K7/aQqyjVwF26kG8WDRapha', 2, 'jon', 1, 'cj@xyz.pl', true);
+INSERT INTO public.users (u, userid, password, type, username, version, email, is_active) VALUES ('Moderator', '376dbc13-3b05-4852-885b-95673760b4ea', '$2a$10$4n2WP8uEkGt2oAtI8Bm53ugR4hhca3K7/aQqyjVwF26kG8WDRapha', 1, 'jon_mod', 0, 'mj@xyz.pl', NULL);
+INSERT INTO public.users (u, userid, password, type, username, version, email, is_active) VALUES ('Customer', '86a3b048-45b4-4de9-8b42-855d4fa8b0c4', '$2a$10$4n2WP8uEkGt2oAtI8Bm53ugR4hhca3K7/aQqyjVwF26kG8WDRapha', 2, 'username', 1, 'email@xyz.pl', true);

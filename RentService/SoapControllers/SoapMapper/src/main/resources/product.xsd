@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pl.lodz.p.it/tks/product"
+           targetNamespace="http://pl.lodz.p.it/tks/product" elementFormDefault="qualified">
+
+    <!--    R E Q U E S T S  -->
+
+    <xs:element name="getProductRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="productID" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="deleteProductRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="productID" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateSkiRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ski" type="tns:skiSoap"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateSkiBootRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="skiBoot" type="tns:skiBootSoap"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="productResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" type="tns:productSoap"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="createSkiBootRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="skiBoot" type="tns:skiBootSoap"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="createSkiRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ski" type="tns:skiSoap"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getReservationsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:string"/>
+                <xs:element name="past" type="xs:boolean" default="false"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="reservationsResponse">
+        <xs:complexType>
+            <xs:sequence>
+               <xs:element name="reservation" type="tns:reservationSoap" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="allProductsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" type="tns:productSoap" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+<!--    M O D E L  S O A P O W Y   -->
+
+
+    <xs:complexType name="productSoap">
+        <xs:sequence>
+            <xs:element name="productID" type="xs:string"/>
+            <xs:element name="price" type="xs:double"/>
+            <xs:element name="reservation" type="tns:reservationSoap" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="skiSoap">
+        <xs:complexContent>
+            <xs:extension base="tns:productSoap">
+                <xs:sequence>
+                    <xs:element name="weight" type="xs:double"/>
+                    <xs:element name="length" type="xs:double"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="skiBootSoap">
+        <xs:complexContent>
+            <xs:extension base="tns:productSoap">
+                <xs:sequence>
+                    <xs:element name="size" type="xs:double"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="reservationSoap">
+        <xs:sequence>
+            <xs:element name="reservationID" type="xs:string"/>
+            <xs:element name="startDate" type="xs:date"/>
+            <xs:element name="endDate" type="xs:date"/>
+            <xs:element name="customer" type="xs:string"/>
+            <xs:element name="product" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
